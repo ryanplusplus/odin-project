@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader'
+if develop? require 'sinatra/reloader'
 
 def caesar_cipher plaintext, shift
   ciphertext_chars = plaintext.chars.map do |c|
