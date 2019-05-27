@@ -1,8 +1,29 @@
 <html>
-  <head></head>
+  <head>
+    <style>
+      body {
+        <% if !delta %>
+          background: "#FFFFFF";
+        <% elsif delta == 0 %>
+          background: green;
+        <% else %>
+          background: <%= "#FF#{(0xFF * (100 - delta) / 100).to_i.to_s(16).rjust(2, '0') * 2}" %>;
+        <% end %>
+      }
+    </style>
+  </head>
   <body>
     <p>
-      The secret number is <%= secret_number %>
+      <%= message.gsub "\n", "<br />" if message %>
     </p>
+    <% if cheat %>
+      <p>
+        Psst, the answer is <%= secret %>
+      </p>
+    <% end %>
+    <form>
+      <input type='text' name='guess' />
+      <input type='submit' value='Guess!' />
+    </form>
   </body>
 </html>
