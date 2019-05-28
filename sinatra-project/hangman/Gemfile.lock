@@ -2,12 +2,12 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.15.0)
+    literate_randomizer (0.4.0)
     multi_json (1.13.1)
     mustermann (1.0.3)
     rack (2.0.7)
     rack-protection (2.0.5)
       rack
-    random-word (2.1.1)
     sinatra (2.0.5)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -26,7 +26,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  random-word
+  literate_randomizer
   sinatra
   sinatra-contrib
 

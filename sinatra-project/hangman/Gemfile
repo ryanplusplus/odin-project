@@ -4,4 +4,4 @@ ruby "2.6.3"
 
 gem "sinatra"
 gem "sinatra-contrib"
-gem "random-word"
+gem "literate_randomizer"

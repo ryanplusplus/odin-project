@@ -1,4 +1,4 @@
-require 'random-word'
+require 'literate_randomizer'
 
 class Game
   def self.current state
@@ -8,10 +8,7 @@ class Game
   end
 
   def self.create state
-    loop do
-      state['word'] = RandomWord.nouns.next
-      break if /^[[:alpha:]]+$/.match state['word']
-    end
+    state['word'] = LiterateRandomizer.word.downcase
     state['remaining_guesses'] = 7
     state['guesses'] = ''
   end
