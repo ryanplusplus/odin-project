@@ -14,6 +14,7 @@ class Game
   end
 
   def self.guess state, c
+    c = c.downcase
     if not state['guesses'].include? c then
       state['guesses'] += c
 
