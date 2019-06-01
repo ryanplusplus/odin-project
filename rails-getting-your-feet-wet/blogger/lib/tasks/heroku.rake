@@ -13,4 +13,8 @@ namespace :heroku do
   task :open do
     sh 'heroku open -a ryanplusplus-rails-blogger'
   end
+
+  task :logs do
+    sh 'heroku logs --tail -a ryanplusplus-rails-blogger'
+  end
 end
